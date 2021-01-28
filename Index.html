@@ -1,282 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <style type="text/css" media="all">
-      *{
-          margin:0;
-          padding:0;
-          box-sizing: border-box;
-      }
-      
-      body{
-          background-color:;
-      }
-      
-      .main{
-          overflow: hidden;
-          border-bottom: 2px solid yellow;
-      }
-      .container,.container2{
-          width: 17px;
-          height: 210px;
-          background: transparent;
-          overflow: hidden;
-          margin-top: -20px;
-          float: left;
-      }
-      
-      .div1{
-          height: 4px;
-          width:70px;
-          background:white ;
-          margin: 7px 0;
-          transform: rotate(-45deg);
-          margin-left: -15px;
-          
-      }
-      
-      .container2{
-          position: absolute;
-          right: 0;
-          bottom: 0;
-          width: 10px;
-          height: 120px;
-      }
-      
-      .container2>.div1{
-          background: black;
-      }
-      
-      
-.div11{
-    background-color:#012135 ;
-    overflow: hidden;
-}
-h3{
-    text-align: center;
-    color: #e7e9ec;
-    margin:30px 0 20px 0;
-}
-.poo{
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    color:#70a8cf;
-    font-size: 0.5rem;
-    margin-bottom: 15px;
-    
-}
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="shortcut icon" href="img/favicon.png"> -->
+	<title>cv</title>
+	<!-- <link rel="stylesheet" href="style.css"> -->
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: sans-serif;
+		}
 
-h5,.pooo{
-    padding-left: 35px;
-    margin-bottom: 5px;
-    font-family: Sans-Serif;
-}
+		body{
+			height: 100vh;
+			background: #EDF0F2;
+		}
 
-.pooo{
-    font-size: 0.5rem;
-    padding-right: 19px;
-}
-          
-.left{
-    color:white;
-    float:left;
-    width:70%;
-}  
+		.container{
+			margin: auto;
+			max-width: 1000px;
+			background: #ddd;
+			display: grid;
+			grid-template-areas: 
+			'd1 d1 d1 d1 d1'
+			'd1 d1 d1 d1 d1'
+			'd2 d2 d2 d3 d3'
+			'd2 d2 d2 d3 d3'
+			'd2 d2 d2 d3 d3'
+			'd2 d2 d2 d3 d3'
+		}
 
-.right{
-    float: right;
-}
+		.div1,.div2,.div3{
+			border:1px solid black;
+		}
 
-.right img{
-    width: 105px;
-    border: 2px solid white;
-    border-radius: 50%;
-    margin-top: 45px;
-}
+		.div1{grid-area: d1;
+			overflow: hidden;
+			position: relative;
+			background: #022135;}
+			.div2{grid-area: d2;
+				background: #DDE9F1;}
+				.div3{grid-area: d3;
+					background: #DE0F3F;
+				}
 
-.div12{
-    float:left;
-    width: 60%;
-    height: 65vh;
-    background: #dde7f0;
-    padding-left: 34px;
-    padding-top: 10px;
-}
+				.design-parent{
+					width:60px;
+					max-height: 335px;
+					overflow: hidden;
+					position: absolute;
+					left: -24px;
+				}
 
-.div13{
-    width: 40%;
-    float:right;
-    background: #dd0f3f;
-    height: 65vh;
-    padding: 10px;
-    color:white;
-    position: relative;
-}
+				.design-child{
+					margin-top: -59px;
+					overflow: hidden;
+					background: #FFFFFF;
+				}
 
-.tool{
-    padding-left: initial;
-    font-family: Sans-Serif;
-    color: #012135;
-    letter-spacing: 1.5px;
-}
+				.div1 .design-parent .design-child .stick{
+					height: 5px;
+					width: 100px;
+					background:#022135;
+					transform: rotate(-45deg);
+					margin: 10px 0;
 
-.gain{
-    font-size: 0.7rem;
-    color:#dd0f3f;
-    padding: 3px 0;
-}
+				}
 
-.pain{
-    font-size: 0.5rem;
-    color:#dd0f3f;
-    padding: 3px 0;
-}
+				.photo img{
+					width: 250px;
+					height: 250px;
+					border-radius: 50%;
+					border:2px solid white;
+				}
 
-.gree{
-    font-size: 0.6rem;
-    padding: 3px 10px 5px 0 ;
-}
+				.photo{
+					float: right;
+					text-align: center;
+					width: 40%;
+					padding: 40px 0;
+				}
 
-.mool{
-    padding: initial;
-    letter-spacing: 2px;
-    font-size: 0.7rem;
-}
+				.heading{
+					float: left;
+					width: 57%;
+					padding-left: 50px;
+					padding-right: 30px;
+				}
+
+				.heading h1{
+					margin: 40px 0;
+					color: #EFF0F2;
+				}
+
+				.heading h4{
+					letter-spacing: 6px;
+					color: #7BB7E0;
+				}
+
+				.heading h3{
+					margin-top: 30px;
+					margin-bottom: 15px;
+					letter-spacing: 2px;
+					color: #EFF0F2;
+				}
+
+				.heading p{
+					color: #EFF0F2;
+					margin-bottom: 30px;
+				}
+
+				.div2 .flex{padding-left: 80px;
+					padding-top: 40px;
+					padding-right: 30px;}
+
+					.div2 .flex h3{color: #022135;letter-spacing: 3px;}
+
+					.div2 .flex h4,.div2 .flex h5{color: #DE0F3F}
+
+					.div3 {color: #DDE9F1;}
+
+					.div3 .flex1{padding: 40px 20px 20px 35px;
+					}
+
+					@media screen and (max-width: 950px){
+						.container{min-width: 500px;}
+						.heading,.photo{width:100%; text-align: center;}
+						.design-parent{max-height: 630px;}
+						.heading p{
+							padding: 0 50px;
+						}
 
 
-    </style>
-</head>
-<body>
+					}
+				</style>
+			</head>
+			<body>
 
-   <div class="main">
-            <div class="div11">
-                <div class="left">
-                       <div class="container">
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-   </div>
-                    <h3>ABDULLAH AL NOMAN</h3>
-                    <p class="poo">Web Developer</p>
-    <h5>Career Summury</h5>
-    <p class="pooo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, ipsum culpa facilis, cupiditate omnis ullam libero placeat! Qui, cumque rerum, sint suscipit sunt, ratione asperiores dolore quo delectus iusto, veritatis.</p>
-                </div>
-                <div class="right">
-                    <img src="kim.jpg" alt="">
-                </div>
-            </div>
-            <div class="div12">
-                <h5 class="tool">Work Experience</h5>
-                <p class="gain">Head IT Engineer</p>
-                <p class="pain">Mags Company | 2016-2017</p>
-                <p class="gree"> -Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque alias debitis commodi. Suscipit voluptas cumque dolor veritatis accusamus eligendi vitae saepe non aspernatur tenetur ad dolore cum, blanditiis nostrum ullam.</p>
-                <br>
-                  <h5 class="tool">Previous School</h5>
-                <p class="gain">Feni Govt. College</p>
-                <p class="pain">Mathematics | 2013-2016</p>
-                <p class="gree"> -Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque alias debitis commodi. Suscipit voluptas cumque dolor veritatis accusamus eligendi vitae saepe non aspernatur tenetur ad dolore cum, blanditiis nostrum ullam.</p>
-    
-            </div> 
-            <div class="div13">
-                <h5 class="mool">Professional Skills</h5>
-                <p class="gree">Lorem ipsum dolor sit amet, m et est sint saepe, hic eea ex in temporibus, sequi solutjxkdnxjxbsn xjsa officiis consectetur fugit!</p>
-              <br>           <h5 class="mool">Charecter References</h5>
-                <p class="gree">Lorem ipsum dolor sit amet, m et est sint saepe, hic eea ex injdjd xjs xj temporibus, sequi soluta officiis consectetur fugit!</p>
-         <br>                <h5 class="mool">How To Contact Me</h5>
-                <p class="gree">Lorem ipsum dolor sit amet, m et est sint saepe, hic eea ex inhsjsjsjx sjs sjd sxj temporibus, sequi soluta officiis consectetur fugit!</p>
-                       <div class="container2">
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-       <div class="div1"></div>
-   </div>
-                     
-            </div>
-        </div>
-   
-</body>
-</html>
+				<div class="container">
+					<div class="div1">
+						<div class="design-parent">
+							<div class="design-child">
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+								<div class="stick"></div>
+							</div>
+						</div>
+						<div class="photo">
+							<img src="photo.jpg" alt="photo">
+						</div>
+						<div class="heading">
+							<h1>ABDULLAH AL NOMAN</h1>
+							<h4>WEB DEVELOPER</h4>
+							<h3>Career Summary</h3>
+							<p>	I am a robotics engineer who's knowledgeable in both computer science and electrical engineering. I have worked in both academic and corporate settings.</p>
+						</div>
+
+					</div>
+					<div class="div2">
+						<div class="flex">
+							<h3>Work Experience</h3><br/>
+							<h4>Head Robotics Engineer</h4><br/>
+							<h5>Gritters and Company | Dec 2015 - present</h5><br/>
+							<p>- Designs and integrates robots that combine seamlessly with client processes
+							- Works closely with other engineers, developers, and managers</p>
+						</div>
+						<div class="flex">
+							<h3>Work Experience</h3><br/>
+							<h4>Head Robotics Engineer</h4><br/>
+							<h5>Gritters and Company | Dec 2015 - present</h5><br/>
+							<p>- Designs and integrates robots that combine seamlessly with client processes
+							- Works closely with other engineers, developers, and managers</p>
+						</div>
+						<div class="flex">
+							<h3>Work Experience</h3><br/>
+							<h4>Head Robotics Engineer</h4><br/>
+							<h5>Gritters and Company | Dec 2015 - present</h5><br/>
+							<p>- Designs and integrates robots that combine seamlessly with client processes
+							- Works closely with other engineers, developers, and managers</p>
+						</div>
+						<div class="flex">
+							<h3>Work Experience</h3><br/>
+							<h4>Head Robotics Engineer</h4><br/>
+							<h5>Gritters and Company | Dec 2015 - present</h5><br/>
+							<p>- Designs and integrates robots that combine seamlessly with client processes
+							- Works closely with other engineers, developers, and managers</p>
+						</div>
+						<br>
+						<br>
+					</div>
+					<div class="div3">
+						<div class="flex1">
+							<h3>Professional Skills</h3>
+							<br/>
+							<p> - Installation and Debugging <br>
+								- Technology Design <br/>
+								- Systems Analysis and Evaluation <br/>
+								- Machine Learning <br/>
+								- Artificial Intelligence <br/>
+							- Computer Programming</p>
+						</div>
+						<br>
+						<br>
+						<br>
+						<div class="flex1">
+							<h3>Character References</h3>
+							<br/>
+							<p>Eun Ae MunData Scientist, EstateByteEmail: hello@reallygreatsite.com
+								Rosuel Rodrigues
+								Project Manager, Dekalogic Financial
+							Email: hello@reallygreatsite.com</p>
+						</div>
+						<br>
+						<br>
+						<br>
+						<div class="flex1">
+							<h3>Character References</h3>
+							<br/>
+							<p>Eun Ae MunData Scientist, EstateByteEmail: hello@reallygreatsite.com
+								Rosuel Rodrigues
+								Project Manager, Dekalogic Financial
+							Email: hello@reallygreatsite.com</p>
+						</div>
+						<br>
+						<br>
+
+					</div>
+					<br>
+					<br>
+
+				</div>
+
+			</body>
+			</html>
